@@ -15,7 +15,7 @@
 
     .container {
       text-align: center;
-      margin-top: 50px;
+      margin-top: 10px;
     }
 
     .question-box {
@@ -38,7 +38,7 @@
     }
 
 
-    button.btn {
+    #b {
       background-color: #E4E46F;
       color: 0;
       border: none;
@@ -53,7 +53,19 @@
 </head>
 
 <body style="background-color: #38B6FF">
-  <!-- <button id="back" type="submit" class="btn btn-primary" style="width: 30; height: 30">-->
+  <div style="padding-left : 30; padding-top : 30; ">
+    <button id="back" type="submit" class="btn btn-secondary">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" fill="currentColor" class="bi bi-caret-left"
+        viewBox="0 0 16 16">
+        <path
+          d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753" />
+      </svg>
+    </button>
+  </div>
+  <div style="margin-left: auto; margin-right: calc(100% - 30px);">
+    <button id="flashcards" type="submit" class="btn btn-primary">FlashCards</button>
+  </div>
+
   <div class="container">
     <!-- tutto ciò verrà racchiuso in un div a cui verrà fatto innerHTML
     della render in sceltaMaterie -->
@@ -62,27 +74,25 @@
 
     <div class="question-box">
       <div class="question">
-        <p style="font-size: 20px;">Il "#" nel linguaggio css, sta a significare...</p>
-        <div style="text-align: left;">
-          <ol>
-            <li>opzione 1</li>
-            <li>opzione 2</li>
-            <li>opzione 3</li>
-            <li>opzione 4</li>
-          </ol>
-        </div>
+        <p style="font-size: 22px;">Il "#" nel linguaggio css, sta a significare...</p><br>
+        <ol style="font-size: 18px;">
+          <li>opzione 1</li>
+          <li>opzione 2</li>
+          <li>opzione 3</li>
+          <li>opzione 4</li>
+        </ol>
       </div>
     </div>
     <br>
     <div class="options">
-      <button class="btn btn-secondary">Opzione 1</button>
-      <button class="btn btn-secondary">Opzione 2</button>
-      <button class="btn btn-secondary">Opzione 3</button>
-      <button class="btn btn-secondary">Opzione 4</button>
+      <button id="b" class="btn btn-secondary">Opzione 1</button>
+      <button id="b" class="btn btn-secondary">Opzione 2</button>
+      <button id="b" class="btn btn-secondary">Opzione 3</button>
+      <button id="b" class="btn btn-secondary">Opzione 4</button>
     </div>
   </div>
-  </div>
-  <script src="sceltaMaterie.js"></script>
+
+  <script src="gestioneViewDomande.js"></script>
 </body>
 
 </html>

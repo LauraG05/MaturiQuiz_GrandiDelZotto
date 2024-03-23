@@ -3,6 +3,7 @@ const matematica = document.getElementById("MATE");
 const italiano = document.getElementById("ITA");
 const sistemi = document.getElementById("SIS");
 
+const back = document.getElementById("back");
 
 const domandeTot = [
   {
@@ -215,5 +216,10 @@ italiano.onclick = () => {
 
 sistemi.onclick = () => {
   window.location.href = 'sistemi.html';
+  // renderDomande(domandeTot, 0, document.getElementById("infoDomande"));
+}
+
+back.onclick = () => {
+  window.location.href = 'login.html';
   // renderDomande(domandeTot, 0, document.getElementById("infoDomande"));
 }
