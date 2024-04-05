@@ -127,11 +127,23 @@ console.log("carico le domande");
     let lunghezza= response.length;
     console.log(lunghezza);
     let domande=[];
+    let numeriRipetuti=[Math.floor(Math.random() * 10-1) + 1];
     for (let i = 0; i < 5; i++) {
-       // let indice = Math.floor(Math.random() * lunghezza-1) + 1;
-     // console.log(indice);
-        //domande[i] = response[indice].testo;
-      domande[i] = response[i].testo;
+       let indice = Math.floor(Math.random() * 10-1) + 1;
+      console.log("all'inizio vale ",indice);
+      for(let j=0; j<numeriRipetuti.length;j++){
+        if(indice===numeriRipetuti[j]){
+           console.log("entro al momento",j);
+          indice = Math.floor(Math.random() * 10-1) + 1;
+        while(indice===numeriRipetuti[j]){
+          indice = Math.floor(Math.random() * 10-1) + 1;
+        }
+          j=0;
+        }
+      }
+       console.log("alla fine vale ",indice);
+      numeriRipetuti[i+1]=indice;
+        domande[i] = response[indice].testo;
     }
     console.log("passo");
     console.log(domande);
@@ -143,7 +155,7 @@ console.log("carico le domande");
   });
 });
 
-//FUNZIONI PER LA CREAZIONE DELLE OPZIONI PER LE DOMANDE ( RICHIEDE DAL CLIENT LE DOMANDE GENERATE PRIMA)
+//FUNZIONI PER LA CREAZIONE DELLE OPZIONI PER LE DOMANDE (RICHIEDE DAL CLIENT LE DOMANDE GENERATE PRIMA)
 const selectID = (domande)=>{
   let array=[]
    console.log("domande",domande);
