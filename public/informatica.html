@@ -1,4 +1,5 @@
 <html>
+<!-- //informatica.html -->
 
 <head>
   <meta charset="utf-8">
@@ -38,7 +39,7 @@
     }
 
 
-    #b {
+    .b {
       background-color: #E4E46F;
       color: 0;
       border: none;
@@ -66,33 +67,10 @@
     <button id="flashcards" type="submit" class="btn btn-primary">FlashCards</button>
   </div>
 
-  <div class="container">
-    <!-- tutto ciò verrà racchiuso in un div a cui verrà fatto innerHTML
-    della render in sceltaMaterie -->
-    <h1>Titolo del Quiz</h1>
-    <br>
-
-    <div class="question-box">
-      <div class="question">
-        <p style="font-size: 22px;">Il "#" nel linguaggio css, sta a significare...</p><br>
-        <ol style="font-size: 18px;">
-          <li>opzione 1</li>
-          <li>opzione 2</li>
-          <li>opzione 3</li>
-          <li>opzione 4</li>
-        </ol>
-      </div>
-    </div>
-    <br>
-    <div class="options">
-      <button id="b" class="btn btn-secondary">Opzione 1</button>
-      <button id="b" class="btn btn-secondary">Opzione 2</button>
-      <button id="b" class="btn btn-secondary">Opzione 3</button>
-      <button id="b" class="btn btn-secondary">Opzione 4</button>
-    </div>
+  <div id="domanda">
   </div>
 
-  <script src="gestioneViewDomande.js"></script>
+  <script type="module" src="gestioneViewDomande.js"></script>
 </body>
 
 </html>

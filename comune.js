@@ -1,1 +1,0 @@
-// funzioni server e db, query ecc
