@@ -2,20 +2,23 @@ const confermaUtente = document.getElementById("SUBMIT");
 const back = document.getElementById("back");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
-
-import {accesso} from './accesso.js';
+const procedi = document.getElementById("procedi");
+/*
+import {registrazione} from './registrazione.js';
 
 confermaUtente.onclick = () => {
-  accesso(
+  registrazione(
     document.getElementById("username").value,
     document.getElementById("password").value
     //console.log("funzia?");
   );
   document.getElementById("username").value = "";
   document.getElementById("password").value = "";
-  
-  //window.location.href = 'sceltaMaterie.html';
 };
+*/
+procedi.onclick = () =>{
+  window.location.href = 'sceltaMaterie.html';
+}
 
 back.onclick = () => {
   window.location.href = 'index.html';

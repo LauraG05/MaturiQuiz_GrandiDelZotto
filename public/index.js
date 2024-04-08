@@ -6,7 +6,7 @@ accedi.onclick = () => {
 }
 
 registrati.onclick = () => {
-  window.location.href = 'login.html';
+  window.location.href = 'signin.html';
 }
 
 

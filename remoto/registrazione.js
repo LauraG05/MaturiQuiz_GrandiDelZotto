@@ -1,21 +1,23 @@
-
-export function registrazione (username, password) {
-  fetch('/signup', {
-    method: 'POST',
+const signUp = (user, pass) => {
+  fetch("/signin", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify({ username, password }),
+    body: JSON.stringify({ username: user, password: pass }),
   })
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    if (data.result === "true") {
-      console.log("Utente registrato");
-    }
-  })
-  .catch(error => {
-    console.error("Errore durante la registrazione");
-  });
-}
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.result === "Success") {
+        sessionStorage.setItem("username", user);
+        sessionStorage.setItem("password", pass);
+        window.location.href = "public/login.html";
+      } else {
+        alert("Registration fallita.");
+      }
+    })
+    .catch((error) => {
+      console.error("Errore: ", error);
+    });
+};

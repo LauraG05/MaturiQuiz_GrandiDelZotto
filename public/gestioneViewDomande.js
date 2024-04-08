@@ -202,7 +202,12 @@ export const renderDomande = (domandeTot, numMateria, numDomanda, divSpecifico) 
 
   html += row;
   divSpecifico.innerHTML = html;
-
+  
+  /* stampa domande in base a materia da db
+  selectDomande("INFORMATICA").then((response) => {
+      console.log(response);
+  }); */
+    
   const buttonRisposte = document.querySelectorAll("button.punt");
 
   let corretto = false;

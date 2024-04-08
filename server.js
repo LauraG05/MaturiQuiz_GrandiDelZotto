@@ -124,6 +124,7 @@ app.post("/Domande", (req, res) => {
 console.log("carico le domande");
   console.log(req.body.materia);
   selectDomande(req.body.materia).then((response) => {
+    console.log("MATERIA: "+req.body.materia);
     let lunghezza= response.length;
     console.log(lunghezza);
     let domande=[];

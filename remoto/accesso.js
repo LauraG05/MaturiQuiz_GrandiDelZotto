@@ -1,23 +1,22 @@
-export function accesso (username, password) {
-  fetch('/login', {
-    method: 'POST',
+export function accesso (user, pass) {
+  fetch("/login", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
+      username: user,
+      password: pass,
     },
-    body: JSON.stringify({ username, password }),
   })
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    if (data.result === "true") {
-      console.log("Eseguito il login");
-     // reindirizzamento ??
-    } else {
-      throw new Error('Credenziali non valide');
-    }
-  })
-  .catch(error => {
-    console.error("Errore durante il login");
-  });
-}
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      if (data.result !== "Unauthorized") {
+        sessionStorage.setItem("username", user);
+        sessionStorage.setItem("password", pass);
+        window.location.href = "public/login.html";
+      } 
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+};
