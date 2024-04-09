@@ -3,20 +3,19 @@ const back = document.getElementById("back");
 const username = document.getElementById("username");
 const password = document.getElementById("password");
 const procedi = document.getElementById("procedi");
-/*
-import {registrazione} from './registrazione.js';
 
-confermaUtente.onclick = () => {
+import { registrazione } from './remoto/registrazione.js';
+
+confermaUtente.onclick = async () => {
   registrazione(
     document.getElementById("username").value,
     document.getElementById("password").value
-    //console.log("funzia?");
   );
   document.getElementById("username").value = "";
   document.getElementById("password").value = "";
 };
-*/
-procedi.onclick = () =>{
+
+procedi.onclick = () => {
   window.location.href = 'sceltaMaterie.html';
 }
 

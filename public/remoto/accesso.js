@@ -1,23 +1,22 @@
-const signUp = (user, pass) => {
-  fetch("/signin", {
+export async function accesso(user, pass) {
+  await fetch("/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      username: user,
+      password: pass,
     },
-    body: JSON.stringify({ username: user, password: pass }),
   })
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      if (data.result === "Success") {
+      if (data.result !== "Unauthorized") {
         sessionStorage.setItem("username", user);
         sessionStorage.setItem("password", pass);
         window.location.href = "public/login.html";
-      } else {
-        alert("Registration fallita.");
       }
     })
     .catch((error) => {
-      console.error("Errore: ", error);
+      console.error("Error:", error);
     });
 };
