@@ -1,0 +1,31 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-top: 210px;
+    padding: 70px 0;
+    text-align: center;
+}
+
+
+.full-height-button {
+    height: calc(50vh - 15px);
+    padding: 0;
+    margin: 0;
+}
+
+
+.btn-black {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+.btn-yellow {
+    background-color: #E4E46F;
+    border-color: #E4E46F;
+}
